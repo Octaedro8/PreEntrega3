@@ -1,0 +1,20 @@
+{% extends 'RestoMateApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    <!-- action: representa la url a la que nos va a re-dirigir. Tiene prioridad
+    por sobre la redirección que podamos colocar en views.py -->
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Categoria: <input type="text" name="categoria"></p>
+        <p>Descipcion: <input type="text" name="descripcion"></p>
+        <p>Precio: <input type="text" name="precio"></p>
+        <p>Disponibilidad: <input type="text" name="disponibilidad"></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock main %}

@@ -1,0 +1,32 @@
+{% extends 'RestoMateApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    
+
+<div class="row">
+    {% for locales in object_list %}
+        <div class="card" style="width: 18rem;" >
+            <img src="{% static 'RestoMateApp/assets/img/img_local.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ locales.local }}</h5>
+            <p class="card-text">Direccion: {{ locales.direccion }}</p>
+            <p class="card-text">Localidad: {{ locales.localidad }}</p>
+            <p class="card-text">CP: {{ locales.cp }}</p>
+            <p class="card-text">Tel: {{ locales.tel }}</p>
+            <p class="card-text">Correo Electronico: {{ locales.email }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock main %}
+
+

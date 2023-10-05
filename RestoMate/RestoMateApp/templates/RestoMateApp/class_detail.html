@@ -1,0 +1,18 @@
+{% extends 'RestoMateApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    
+
+
+NOMBRE: {{ menu.descripcion }}<br>
+<button type="button" class="btn btn-dark"><a href="{% url 'List' %}">Regresar</a></button>
+
+
+
+{% endblock main %}
+
+

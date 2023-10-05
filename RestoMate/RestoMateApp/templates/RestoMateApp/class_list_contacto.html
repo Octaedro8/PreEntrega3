@@ -1,0 +1,29 @@
+{% extends 'RestoMateApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    
+
+<div class="row">
+    {% for contacto in object_list %}
+        <div class="card" style="width: 18rem;" >
+            <img src="{% static 'RestoMateApp/assets/img/img_contacto.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ contacto.nombre }}</h5>
+            <p class="card-text">Telefono: {{ contacto.apellido }}</p>
+            <p class="card-text">Correo Electronico: {{ contacto.email }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock main %}
+
+

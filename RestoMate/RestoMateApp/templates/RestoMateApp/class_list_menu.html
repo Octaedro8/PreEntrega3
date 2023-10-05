@@ -1,0 +1,30 @@
+{% extends 'RestoMateApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    
+
+<div class="row">
+    {% for menu in object_list %}
+        <div class="card" style="width: 18rem;" >
+            <img src="{% static 'RestoMateApp/assets/img/img_menu.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ menu.descripcion }}</h5>
+            <p class="card-text">Categoria: {{ menu.categoria }}</p>
+            <p class="card-text">Precio: {{ menu.precio }}</p>
+            <p class="card-text">Disponibilidad: {{ menu.disponible }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock main %}
+
+

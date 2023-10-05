@@ -1,0 +1,20 @@
+{% extends 'RestoMateApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    
+
+
+{% for descripcion in menu %}
+        <li>{{ descripcion }}</li>
+    {% endfor %}
+
+
+
+
+{% endblock main %}
+
+
